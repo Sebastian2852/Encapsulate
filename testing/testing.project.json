@@ -1,0 +1,25 @@
+{
+    "name": "Encapsulator-test",
+    "tree": {
+        "$className": "DataModel",
+
+        "ReplicatedStorage": {
+            "Packages": {
+                "$path": "../packages/"
+            },
+            "Dev": {
+                "$path": "./DevPackages"
+            }
+        },
+
+        "ServerScriptService": {
+            "$className": "ServerScriptService",
+            "Tests": {
+                "$path": "tests"
+            },
+            "TestRunner": {
+                "$path": "./TestRunner.server.luau"
+            }
+        }
+    }
+}
