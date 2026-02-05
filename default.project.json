@@ -5,20 +5,20 @@
 
         "ReplicatedStorage": {
             "Packages": {
-                "$path": "../packages/"
+                "$path": "./packages/"
             },
             "Dev": {
-                "$path": "./DevPackages"
+                "$path": "./testing/DevPackages"
             }
         },
 
         "ServerScriptService": {
             "$className": "ServerScriptService",
             "Tests": {
-                "$path": "tests"
+                "$path": "./testing/tests/"
             },
             "TestRunner": {
-                "$path": "./TestRunner.server.luau"
+                "$path": "./testing/TestRunner.server.luau"
             }
         }
     }

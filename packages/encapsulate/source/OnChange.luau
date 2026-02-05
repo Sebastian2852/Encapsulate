@@ -1,4 +1,4 @@
-local Types = require("./Types")
+local Types = require(script.Parent.Types)
 type CapsuleFn<T> = Types.CapsuleFn<T>
 type RawCapsule<T> = Types.RawCapsule<T>
 type LinkedListItem<T> = Types.CapsuleListnerLinkedListItem<T>
