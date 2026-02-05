@@ -5,6 +5,15 @@ type LinkedListItem<T> = Types.CapsuleListnerLinkedListItem<T>
 
 local exports = {}
 
+--[=[
+	Execute a `handler` function when the passed `capsule` changes it's state. The `handler`
+	recieves the previous state as well as the new state. This function returns lamda to
+	stop listening to changes in the capsule.
+
+	@param capsule -- The capsule to listen to
+	@param handler -- The handler function
+	@return A cleanup function
+]=]
 local function onChange<T>(capsule: CapsuleFn<T>, handler: (previous: T, new: T) -> nil)
 	local rawCapsule = (capsule :: any) :: RawCapsule<T>
 

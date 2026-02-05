@@ -3,6 +3,11 @@ type CapsuleFn<T> = Types.CapsuleFn<T>
 type RawCapsule<T> = Types.RawCapsule<T>
 
 local function updateListners<T>(lastValue: T, newValue: T, capsule: RawCapsule<T>)
+	--// NOTE:
+	--// It might be a good idea to wrap this stuff in a `task.spawn` or something
+	--// just so its not blocking with all the random stuff this function does
+	--// (its heavily optimized I know)
+
 	local firstIndex = 0
 	local emptyIndexes = {}
 
@@ -28,6 +33,12 @@ end
 
 local exports = {}
 
+--[=[
+	Create a capsule with an initial state. The state can be pretty much anything.
+
+	@param initialValue -- starting state of the capsule
+	@return a new capsule.
+]=]
 local function capsule<T>(initialValue: T)
 	local currentValue = initialValue
 
