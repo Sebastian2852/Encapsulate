@@ -1,0 +1,10 @@
+[package]
+name = "sebastian2852/encapsulate"
+description = "Simple state managment"
+version = "0.0.1"
+license = "MIT"
+authors = [ "sebastian2852" ]
+realm = "shared"
+exclude = ["**", "**/*", "**/**"]
+include = [ "source", "wally.toml", "LICENSE", "default.project.json" ]
+private = true

@@ -1,0 +1,11 @@
+{
+    "[luau]": {
+        "editor.defaultFormatter": "JohnnyMorganz.stylua",
+        "editor.formatOnSave": true,
+    },
+    "luau-lsp.sourcemap.rojoProjectFile": "packages/encapsulate/default.project.json",
+    "luau-lsp.completion.imports.requireStyle": "alwaysRelative",
+    "luau-lsp.completion.imports.stringRequires.enabled": true,
+    "luau-lsp.platform.type": "roblox",
+    "luau-lsp.types.robloxSecurityLevel": "LocalUserSecurity"
+}
