@@ -2,9 +2,9 @@
 name = "sebastian2852/encapsulate"
 description = "Simple state managment"
 version = "0.1.0"
+registry = "https://github.com/UpliftGames/wally-index"
 license = "MIT"
 authors = [ "sebastian2852" ]
 realm = "shared"
 exclude = ["**", "**/*", "**/**"]
-include = [ "source", "wally.toml", "LICENSE", "default.project.json" ]
-private = true
+include = [ "source", "source/**/*", "wally.toml", "LICENSE", "default.project.json" ]
