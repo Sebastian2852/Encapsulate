@@ -17,7 +17,7 @@ return function()
 			cleanup = Encapsulate.onCapsuleChanged(capsule, onChange)
 			capsule(10)
 
-			expect(didObserve).to.be.ok()
+			expect(didObserve).to.equal(true)
 		end)
 
 		it("Passes correct arguments", function()

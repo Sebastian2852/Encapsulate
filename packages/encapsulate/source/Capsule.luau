@@ -1,35 +1,9 @@
 local Types = require(script.Parent.Types)
-type CapsuleFn<T> = Types.CapsuleFn<T>
-type RawCapsule<T> = Types.RawCapsule<T>
+type Capsule<T> = Types.CapsuleFn<T>
 
-local function updateListners<T>(lastValue: T, newValue: T, capsule: RawCapsule<T>)
-	--// NOTE:
-	--// It might be a good idea to wrap this stuff in a `task.spawn` or something
-	--// just so its not blocking with all the random stuff this function does
-	--// (its heavily optimized I know)
-
-	local firstIndex = 0
-	local emptyIndexes = {}
-
-	for i, v in capsule._Listners do
-		if v.fn ~= nil then
-			firstIndex = i
-			break
-		else
-			table.insert(emptyIndexes, i)
-		end
-	end
-
-	local current = capsule._Listners[firstIndex]
-	while current ~= nil do
-		current.fn(lastValue, newValue)
-		current = current._next
-	end
-
-	for _, i in emptyIndexes do
-		table.remove(capsule._Listners, i)
-	end
-end
+local Box = require(script.Parent.Box)
+local capsules = Box.capsules
+local sendUpdate = Box.sendUpdate
 
 local exports = {}
 
@@ -39,27 +13,30 @@ local exports = {}
 	@param initialValue -- starting state of the capsule
 	@return a new capsule.
 ]=]
-local function capsule<T>(initialValue: T)
+local function createCapsule<T>(initialValue: T): Capsule<T>
 	local currentValue = initialValue
 
-	local callFn = function(self: RawCapsule<T>, newValue: T? | (currentValue: T) -> T)
+	local capsule
+	capsule = function(newValue: T? | (currentValue: T) -> T)
 		if type(newValue) == "function" then
-			local oldValue = currentValue
+			local prev = currentValue
 			currentValue = newValue(currentValue)
-			updateListners(oldValue, currentValue, self)
+			sendUpdate(capsule, prev, currentValue)
 			return
 		elseif newValue ~= nil then
-			local oldValue = currentValue
+			local prev = currentValue
 			currentValue = newValue
-			updateListners(oldValue, currentValue, self)
+			sendUpdate(capsule, prev, currentValue)
 			return
 		else
 			return currentValue
 		end
 	end
 
-	return (setmetatable({ _Listners = {} }, { __call = callFn }) :: any) :: CapsuleFn<T>
+	capsules[capsule] = setmetatable({}, { __mode = "k" })
+
+	return capsule
 end
-exports.capsule = capsule
+exports.createCapsule = createCapsule
 
 return exports
