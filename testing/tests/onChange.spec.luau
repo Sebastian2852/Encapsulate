@@ -38,5 +38,21 @@ return function()
 			expect(gotPrev).to.equal(0)
 			expect(gotNew).to.equal(10)
 		end)
+
+		it("Disconnectes", function()
+			local capsule = Encapsulate.createCapsule(0)
+
+			local timesFired = 0
+
+			local cleanup = Encapsulate.onCapsuleChanged(capsule, function(previous, new)
+				timesFired += 1
+			end)
+
+			capsule(5)
+			cleanup()
+			capsule(5)
+
+			expect(timesFired).to.equal(1)
+		end)
 	end)
 end

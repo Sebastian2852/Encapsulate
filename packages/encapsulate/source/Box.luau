@@ -17,7 +17,6 @@ exports.clearBox = clearBox
 local function listenToUpdates<T>(capsule: Capsule<T>, callback: ListnerFn<T>)
 	capsules[capsule][callback] = true
 
-	-- TODO: Ensure this works as expected (write unit test for disconnecting)
 	return function()
 		capsules[capsule][callback] = nil
 	end
