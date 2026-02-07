@@ -5,10 +5,9 @@
 
         "ReplicatedStorage": {
             "Packages": {
-                "$path": "./packages/"
-            },
-            "Dev": {
-                "$path": "./testing/DevPackages"
+                "$path": "./testing/DevPackages",
+                "encapsulate": { "$path": "packages/encapsulate" },
+                "encapsulate-react": { "$path": "packages/encapsulate-react" }
             }
         },
 
