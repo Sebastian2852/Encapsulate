@@ -3,8 +3,29 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Encapsulate = require(ReplicatedStorage.Packages.encapsulate)
 
 return function()
-	describe("On Change", function()
-		it("Observe changes", function()
+	describe("Basics", function()
+		it("Has correct initial Value", function()
+			local capsule = Encapsulate.createCapsule(5)
+			expect(capsule()).to.equal(5)
+		end)
+
+		it("Can update state with value", function()
+			local capsule = Encapsulate.createCapsule(5)
+			capsule(10)
+			expect(capsule()).to.equal(10)
+		end)
+
+		it("Can update state with function", function()
+			local capsule = Encapsulate.createCapsule(5)
+			capsule(function(prev)
+				return prev * 3
+			end)
+			expect(capsule()).to.equal(15)
+		end)
+	end)
+
+	describe("Watching Changes", function()
+		it("Can observe changes", function()
 			local capsule = Encapsulate.createCapsule(5)
 			local didObserve = false
 
