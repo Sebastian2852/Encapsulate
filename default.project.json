@@ -13,6 +13,9 @@
 
         "ServerScriptService": {
             "$className": "ServerScriptService",
+            "Utils": {
+                "$path": "./testing/utils/"
+            },
             "Tests": {
                 "$path": "./testing/tests/"
             },
