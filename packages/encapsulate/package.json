@@ -4,9 +4,8 @@
 	"description": "Simple roblox state management",
 	"repository": "sebastian2852/encapsulate",
 	"license": "MIT",
+	"files": ["source", "source/**", "source/**/*"],
 	"main": "source/init.luau",
 	"types": "source/index.d.ts",
-	"scripts": {
-		"prepare": "cp ../../LICENSE ."
-	}
+	"scripts": {}
 }
