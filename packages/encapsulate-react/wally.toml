@@ -1,7 +1,7 @@
 [package]
 name = "sebastian2852/encapsulate-react"
 description = "Simple state managment"
-version = "1.0.0"
+version = "1.0.1"
 registry = "https://github.com/UpliftGames/wally-index"
 license = "MIT"
 authors = [ "sebastian2852" ]
@@ -11,4 +11,4 @@ include = [ "source", "source/**/*", "wally.toml", "LICENSE", "default.project.j
 
 [dependencies]
 React = "jsdotlua/react@^17"
-encapsulate = "sebastian2852/encapsulate@^0.1"
+encapsulate = "sebastian2852/encapsulate@^1"
