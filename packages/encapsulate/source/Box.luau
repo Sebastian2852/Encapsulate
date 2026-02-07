@@ -14,6 +14,13 @@ local function clearBox()
 end
 exports.clearBox = clearBox
 
+--[=[
+	Listen to changes from the passed `capsule` and run the `callback` when state changes.
+
+	@param capsule -- capsule to watch state changes
+	@param callback -- function to run when state changes
+	@return a cleanup function
+]=]
 local function listenToUpdates<T>(capsule: Capsule<T>, callback: ListnerFn<T>)
 	capsules[capsule][callback] = true
 
