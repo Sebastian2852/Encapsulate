@@ -5,11 +5,13 @@
  
 ## ✨ Features
 
-Encapsulate aims to be a simple lightweight state managment solution for Roblox inspired by Charm. Here are the key selling points of encapsulate:
+Encapsulate aims to be a simple lightweight state managment solution for Roblox inspired by [charm](https://github.com/littensy/charm). Here are the key selling points of encapsulate:
 
-- Reactivity
+- Reactive state updates
 - Minimal API
 - Lightweight
+
+---
 
 ## 📦 Installing
 
@@ -25,10 +27,7 @@ Add the following to your wally manifest (`wally.toml`):
 Encapsulate = "sebastian2852/encapsulate@VERSION"
 ```
 
-## 📖 Attributions & License
-
-Heavily inspired by [littensy/charm](https://github.com/littensy/charm)  
-Released under the [MIT License](https://github.com/Sebastian2852/Encapsulate/blob/Main/LICENSE)
+---
 
 ## 📚 Reference
 
@@ -92,3 +91,42 @@ disconnect()
 #### Returns
 
 A function which stops it from listening to state changes from the `capsule`.
+
+---
+
+## 📦⚛️ Encapsulate-React
+
+### Installing
+
+Add the following to your wally manifest (`wally.toml`):
+
+```toml
+[dependencies]
+EncapsulateReact = "sebastian2852/encapsulate-react@VERSION"
+```
+
+---
+
+### `useCapsule<T>(capsule: Capsule<T>)`
+
+Use this hook at the top-level of a component to read the state of the `capsule`, this will also re-render the component every time the capsule changes it's state.
+
+
+#### Code Example
+
+```lua
+local capsule = Encapsulate.createCapsule(5)
+
+local function MyAwesomeComponent()
+    local number = useCapsule(capsule)
+    ...
+end
+```
+
+#### Paramaters
+
+- `capsule`: The capsule to listen to state changes from
+
+#### Returns
+
+The current state of the capsule.
