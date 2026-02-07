@@ -2,3 +2,4 @@ sourcemap.json
 *.rbxm
 testing/DevPackages/
 build/
+node_modules/
