@@ -4,7 +4,7 @@ local exports = {}
 
 function useCapsule<T>(scope, capsule: encapsulate.Capsule<T>)
 	local state = scope:Value(capsule())
-	local disconnect = encapsulate.onCapsuleChanged(capsule, function(_, v)
+	local disconnect = encapsulate.onCapsuleChanged(capsule, function(v)
 		state:set(v)
 	end)
 	table.insert(scope, disconnect)

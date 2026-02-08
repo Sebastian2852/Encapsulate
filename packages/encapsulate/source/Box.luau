@@ -36,7 +36,7 @@ local function sendUpdate<T>(capsule: Capsule<T>, prev: T, new: T)
 
 	for func, ref in listners :: { [ListnerFn<T>]: boolean } do
 		if ref then
-			func(prev, new)
+			func(new, prev)
 		end	
 	end
 end

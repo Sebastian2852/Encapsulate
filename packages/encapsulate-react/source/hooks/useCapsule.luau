@@ -13,7 +13,7 @@ local function useCapsule<T>(capsule: encapsulate.Capsule<T>)
 	local value, setValue = React.useState(capsule())
 
 	React.useEffect(function()
-		local cleanup = encapsulate.onCapsuleChanged(capsule, function(previous, new)
+		local cleanup = encapsulate.onCapsuleChanged(capsule, function(new, previous)
 			setValue(new)
 		end)
 		return cleanup

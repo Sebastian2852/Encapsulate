@@ -30,7 +30,7 @@ return function()
 			local didObserve = false
 
 			local cleanup
-			local onChange = function(prev, new)
+			local onChange = function(new, prev)
 				didObserve = true
 				cleanup()
 			end
@@ -47,7 +47,7 @@ return function()
 			local gotPrev, gotNew
 
 			local cleanup
-			local onChange = function(prev, new)
+			local onChange = function(new, prev)
 				gotPrev = prev
 				gotNew = new
 				cleanup()
