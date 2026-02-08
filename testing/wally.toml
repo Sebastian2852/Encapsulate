@@ -9,3 +9,4 @@ private = true
 TestEZ = "roblox/testez@0.4.1"
 React = "jsdotlua/react@^17"
 ReactRoblox = "jsdotlua/react-roblox@^17"
+Fusion = "elttob/fusion@^0.3"

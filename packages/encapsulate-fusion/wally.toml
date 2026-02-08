@@ -1,0 +1,14 @@
+[package]
+name = "sebastian2852/encapsulate-fusion"
+description = "Simple state managment"
+version = "1.0.1"
+registry = "https://github.com/UpliftGames/wally-index"
+license = "MIT"
+authors = [ "sebastian2852" ]
+realm = "shared"
+exclude = ["**", "**/*", "**/**"]
+include = [ "source", "source/**/*", "wally.toml", "LICENSE", "default.project.json" ]
+
+[dependencies]
+React = "elttob/fusion@^0.3"
+encapsulate = "sebastian2852/encapsulate@^1"

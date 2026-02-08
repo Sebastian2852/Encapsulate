@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Add `encapsulate-fusion` pacakge for utilities when using fusion with `encapsulate`
+
 ## Version 1.0.1
 
 ### Fixes

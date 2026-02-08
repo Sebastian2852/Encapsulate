@@ -7,7 +7,8 @@
             "Packages": {
                 "$path": "./testing/DevPackages",
                 "encapsulate": { "$path": "packages/encapsulate" },
-                "encapsulate-react": { "$path": "packages/encapsulate-react" }
+                "encapsulate-react": { "$path": "packages/encapsulate-react" },
+                "encapsulate-fusion": { "$path": "packages/encapsulate-fusion" }
             }
         },
 

@@ -3,6 +3,11 @@
 registry = "test"
 
 [[package]]
+name = "elttob/fusion"
+version = "0.3.0"
+dependencies = []
+
+[[package]]
 name = "jsdotlua/boolean"
 version = "1.2.7"
 dependencies = [["number", "jsdotlua/number@1.2.7"]]
@@ -95,4 +100,4 @@ dependencies = []
 [[package]]
 name = "sebastian2852/encapsulate"
 version = "0.0.1"
-dependencies = [["React", "jsdotlua/react@17.2.1"], ["ReactRoblox", "jsdotlua/react-roblox@17.2.1"], ["TestEZ", "roblox/testez@0.4.1"]]
+dependencies = [["Fusion", "elttob/fusion@0.3.0"], ["React", "jsdotlua/react@17.2.1"], ["ReactRoblox", "jsdotlua/react-roblox@17.2.1"], ["TestEZ", "roblox/testez@0.4.1"]]
