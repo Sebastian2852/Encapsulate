@@ -15,7 +15,8 @@ Encapsulate is a small, lightweight state management library for Roblox, inspire
 
 Encapsulate is a monorepo containing the following pacakges:
 
-|                                                 Package                                                 |          Description          |
-|---------------------------------------------------------------------------------------------------------|-------------------------------|
-| [Encapsulate](https://github.com/Sebastian2852/Encapsulate/tree/Main/packages/encapsulate)              | Core state management library |
-| [Encapsulate-React](https://github.com/Sebastian2852/Encapsulate/tree/Main/packages/encapsulate-react)  | React hooks for encapsulate   |
+|                                                 Package                                                   |          Description          |
+|-----------------------------------------------------------------------------------------------------------|-------------------------------|
+| [Encapsulate](https://github.com/Sebastian2852/Encapsulate/tree/Main/packages/encapsulate)                | Core state management library |
+| [Encapsulate-React](https://github.com/Sebastian2852/Encapsulate/tree/Main/packages/encapsulate-react)    | React hooks for `encapsulate`   |
+| (UNRELEASED) [Encapsulate-Fusion](https://github.com/Sebastian2852/Encapsulate/tree/Main/packages/encapsulate-fusion)  | Fusion hooks for `encapsulate`  |

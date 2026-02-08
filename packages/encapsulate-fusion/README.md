@@ -1,5 +1,8 @@
 # Encapsulate-fusion
 
+> [!WARNING]
+> This package is not yet released
+
 ## Installing
 
 Add the following to your wally manifest (`wally.toml`):
@@ -15,7 +18,7 @@ EncapsulateFusion = "sebastian2852/encapsulate-fusion@VERSION"
 
 ### `useCapsule<T>(scope, capsule: Capsule<T>)`
 
-Use this hook at the top-level of a component to read the state of the `capsule`, this will also re-render the component every time the capsule changes it's state.
+Use this hook at the top-level of a component to read the state of the `capsule`.
 
 #### Code Example
 
@@ -30,8 +33,9 @@ end
 
 #### Paramaters
 
+- `scope`: The scope to create the `Value` object in
 - `capsule`: The capsule to listen to state changes from
 
 #### Returns
 
-The current state of the capsule.
+A `Value` representing the capsule's state.
