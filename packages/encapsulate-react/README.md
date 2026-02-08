@@ -21,7 +21,7 @@ Use this hook at the top-level of a component to read the state of the `capsule`
 #### Code Example
 
 ```lua
-local capsule = Encapsulate.createCapsule(5)
+local capsule = createCapsule(5)
 
 local function MyAwesomeComponent()
     local number = useCapsule(capsule)

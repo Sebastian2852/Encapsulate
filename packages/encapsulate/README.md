@@ -55,8 +55,8 @@ Listens to when the `capsule` updates it's and call the `callback`.
 #### Code Example
 
 ```lua
-local capsule = Encapsulate.createCapsule(5)
-local disconnect = Encapsulate.onCapsuleChanged(capsule, function(prev, new)
+local capsule = createCapsule(5)
+local disconnect = onCapsuleChanged(capsule, function(prev, new)
     print(`{prev} -> {new}`)
 end)
 
