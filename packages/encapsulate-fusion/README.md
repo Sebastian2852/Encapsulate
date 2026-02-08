@@ -1,8 +1,5 @@
 # Encapsulate-fusion
 
-> [!WARNING]
-> This package is not yet released
-
 ## Installing
 
 Add the following to your wally manifest (`wally.toml`):
