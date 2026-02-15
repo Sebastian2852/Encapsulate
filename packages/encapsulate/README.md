@@ -48,7 +48,7 @@ end) -- Set the state to double what it is currently
 print(numberCapsule()) -- Read the current value
 ```
 
-### `onCapsuleChanged<T>(capsule: Capsule<T>, callback: (prev: T, new: T) -> nil)`
+### `onCapsuleChanged<T>(capsule: Capsule<T>, callback: (new: T, prev: T) -> nil)`
 
 Listens to when the `capsule` updates it's and call the `callback`.
 
@@ -56,7 +56,7 @@ Listens to when the `capsule` updates it's and call the `callback`.
 
 ```lua
 local capsule = createCapsule(5)
-local disconnect = onCapsuleChanged(capsule, function(prev, new)
+local disconnect = onCapsuleChanged(capsule, function(new, prev)
     print(`{prev} -> {new}`)
 end)
 
@@ -71,5 +71,6 @@ disconnect()
 - `callback`: The function to call when state changes
 
 #### Returns
+
 
 A function which stops it from listening to state changes from the `capsule`.
